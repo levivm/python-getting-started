@@ -1,4 +1,4 @@
-if [ "$FIRST_PROJECT_EXECUTION" != "true" ]; then
+if [ -n "$FIRST_PROJECT_EXECUTION" ]; then
   release: python manage.py runscript release --traceback
 else
   echo "hola"
